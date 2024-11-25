@@ -85,12 +85,16 @@
 1. **日照時間 (Sunshine Duration) vs. 評分**
     - 春季和夏季的日照時間顯示出，較長的日照時間（超過30,000秒）與高評分（4.4至4.8）呈現正相關。
     - 在秋季，不同日照時間對評分的影響相對均衡，未見明顯的趨勢，儘管紅酒在較長的日照下評分略高。
+![image](Picture/SpringSunshine.png)![image](Picture/SummerSunshine.png)![image](Picture/FallSunshine.png)
+
 2. **平均氣溫 (Mean Temperature) vs. 評分**
     - 在春季和夏季，氣溫和評分的相關性較難發現明顯趨勢，氣溫範圍在5°C到25°C之間。
     - 秋季的氣溫對各類酒評分的影響似乎較均勻，且大多數評分集中在4.2至4.6之間。
+![image](Picture/SpringTemp.png)![image](Picture/SummerTemp.png)![image](Picture/FallTemp.png)
 3. **降水量 (Precipitation) vs. 評分**
     - 春季和夏季降水量較低時（約0至5mm），大部分類型的葡萄酒（特別是紅酒）評分略高，但超過一定降水量（>5mm）後，評分趨勢變得較為平坦。
     - 秋季降水量的變化對評分的影響也並不明顯，但當降水量低於5mm時，整體評分似乎稍高，尤其對紅酒的影響更為明顯。
+![image](Picture/SpringPrec.png)![image](Picture/SummerPrec.png)![image](Picture/FallPrec.png)
 
 ## 時間規劃與挑戰 (Timeline and Challenges)
 - 時間表設置：
