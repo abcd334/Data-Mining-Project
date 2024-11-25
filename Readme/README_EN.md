@@ -54,8 +54,8 @@ The results of this study will assist winemakers and grape growers in understand
 ## Evaluation and Validation
 ### Correlation Analysis
 
-![image](Picture/相關係數-1.jpg)
-![image](Picture/相關係數-2.jpg)
+![image](../Picture/相關係數-1.jpg)
+![image](../Picture/相關係數-2.jpg)
 
 In the correlation analysis, we evaluated key features for different types of wine (red, white, rosé, and sparkling). Firstly, price showed a significant positive correlation with ratings across all wine types (ranging from 0.44 to 0.73), indicating a consistent relationship between price and quality. Moreover, various seasonal climate factors impacted the ratings of each wine type differently.
 
@@ -66,7 +66,7 @@ In the correlation analysis, we evaluated key features for different types of wi
 
 In summary, price, region, and seasonal climate factors play critical roles in determining wine ratings across different types. Seasonal variations in sunlight hours and rainfall, in particular, have distinct impacts on the quality of various wine types.
 
-![image](Picture/氣泡酒.jpg)
+![image](../Picture/氣泡酒.jpg)
 
 ### Model Evaluation
 To evaluate the performance of different models in predicting wine quality, we used Lasso regression, principal component analysis (PCA), random forest, and deep learning models, and performed cross-validation to ensure their robustness. The following are the evaluation results and comparisons of each model:
@@ -79,7 +79,7 @@ To evaluate the performance of different models in predicting wine quality, we u
 
   PCA and random forest models generally outperformed Lasso and deep learning models in terms of MSE. Particularly, PCA and random forest models showed more stable prediction effects when the data features exhibited strong linear relationships, while deep learning models, despite their ability to capture nonlinear relationships, did not perform as expected due to the strong linear associations among the data features.
 
-![image](Picture/ModelMSE.png)
+![image](../Picture/ModelMSE.png)
 
 - Computational Efficiency: In terms of processing efficiency, random forest and PCA models are faster and more suitable for handling large amounts of data, while deep learning models require higher computational resources and run slower. Although deep learning models can capture more complex nonlinear relationships, due to the strong linear associations among the data features in this project, deep learning models did not show significant advantages.
 - Cross-validation: Using 5-fold cross-validation to evaluate the robustness of the models, the MSEs of the models in the four types of wine (Red, White, Rose, Sparkling) were:
@@ -89,7 +89,7 @@ To evaluate the performance of different models in predicting wine quality, we u
 
   The results show that both random forest and PCA models have robust prediction effects and stability in cross-validation, making them suitable for predicting wine quality.
   
-![image](Picture/CrossValidationMSE.png)
+![image](../Picture/CrossValidationMSE.png)
 
 ## Feature Importance Analysis
 
@@ -106,19 +106,19 @@ To analyze the impact of seasonal weather features on wine ratings, we combined 
     - The sunshine duration in spring and summer showed a positive correlation with high ratings (4.4 to 4.8) when the duration was longer than 30,000 seconds.
     - In autumn, the influence of different sunshine durations on ratings was relatively balanced, with no obvious trends. However, red wine ratings tended to be higher when the sunshine duration was longer.
 
-![image](Picture/SpringSunshine.png)![image](Picture/SummerSunshine.png)![image](Picture/FallSunshine.png)
+![image](../Picture/SpringSunshine.png)![image](../Picture/SummerSunshine.png)![image](../Picture/FallSunshine.png)
 
 2. **Mean Temperature vs. Rating**
     - In spring and summer, the correlation between temperature and rating was not obvious, with temperatures ranging from 5°C to 25°C.
     - In autumn, the temperature had a relatively uniform influence on the ratings of different types of wine, with most ratings concentrated between 4.2 and 4.6.
 
-![image](Picture/SpringTemp.png)![image](Picture/SummerTemp.png)![image](Picture/FallTemp.png)
+![image](../Picture/SpringTemp.png)![image](../Picture/SummerTemp.png)![image](../Picture/FallTemp.png)
 
 3. **Precipitation vs. Rating**
     - When the precipitation in spring and summer was low (about 0 to 5mm), the ratings of most types of wine (especially red wine) tended to be slightly higher. However, when the precipitation exceeded a certain amount (>5mm), the rating trend became relatively flat.
     - The change in autumn precipitation had no obvious effect on ratings, but when the precipitation was less than 5mm, the overall ratings seemed slightly higher, with a more pronounced effect on red wine.
 
-![image](Picture/SpringPrec.png)![image](Picture/SummerPrec.png)![image](Picture/FallPrec.png)
+![image](../Picture/SpringPrec.png)![image](../Picture/SummerPrec.png)![image](../Picture/FallPrec.png)
 
 ## Timeline and Challenges
 - Timeline:
