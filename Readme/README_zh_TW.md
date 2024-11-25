@@ -51,13 +51,13 @@
 
 ## 評估與驗證 (Evaluation and Validation)
 ### 相關係數
-![image](Picture/相關係數-1.jpg)
-![image](Picture/相關係數-2.jpg)
+![image](../Picture/相關係數-1.jpg)
+![image](../Picture/相關係數-2.jpg)
 - 在相關係數分析中，我們針對不同葡萄酒類型（紅酒、白酒、玫瑰紅酒、氣泡酒）進行了關鍵特徵的評估。首先，價格在四種類型葡萄酒中均與評分呈現出顯著的正相關（0.44 至 0.73 不等），顯示出價格與品質之間的一致關聯。此外，不同的季節性氣候因素對各類型的葡萄酒評分產生了不同的影響。對於紅酒而言，夏季日照時間（0.10）和秋季降水量（0.09）具正向關聯，這表明在成長季中適量的日照與降水有助於提升紅酒的評分。 
 - 在白酒中，秋季日照時間（-0.23）和春季最高氣溫（-0.17）與評分呈現負相關，顯示過度的日照或高溫可能會對白酒品質產生不利影響。對玫瑰紅酒而言，秋季降水量（0.26）和春季降水量（0.22）與評分呈正相關，指出在葡萄成長期的適量降水可能增進其風味和評分。
 - 值得注意的是，氣泡酒的地區特徵與評分間的負相關性（-0.42）顯著，尤其是非香檳區的氣泡酒評分較低，突顯了香檳區在氣泡酒品質中的特殊地位。此外，氣泡酒的評分與秋季低溫（0.23）及夏季日照時間（0.19）呈正相關，說明穩定的氣候條件對維持氣泡酒的高品質具有重要作用。
 - 總結來說，價格、地區和季節性氣候因素在不同類型葡萄酒的品質評分中扮演了關鍵角色，尤其是日照時間和降水量的季節性變化對不同葡萄酒類型的影響較為顯著。
-![image](Picture/氣泡酒.jpg)
+![image](../Picture/氣泡酒.jpg)
 
 ### 模型評估
 為了評估不同模型在葡萄酒品質預測上的表現，我們採用了 Lasso 回歸、主成分分析（PCA）、隨機森林 以及 深度學習 四種模型，並對各模型進行交叉驗證以確保其穩健性。以下是各模型的評估結果與比較：
@@ -68,7 +68,7 @@
   - 深度學習模型：MSE 分別為 0.040 / 0.057 / 0.287 / 0.285
 
   PCA 和隨機森林模型在大多數情況下的 MSE 表現優於 Lasso 和深度學習模型。特別是在數據特徵間線性關係較強的情況下，PCA 和隨機森林具有更穩定的預測效果，而深度學習模型雖具捕捉非線性關係的能力，但因數據特徵呈現線性關聯，效果不如預期。
-![image](Picture/ModelMSE.png)
+![image](../Picture/ModelMSE.png)
 
 - 計算效率：在處理效率上，隨機森林和 PCA 模型的計算速度較快，適合應對大量數據；而深度學習模型運算資源需求較高，運行速度較慢。儘管深度學習模型能夠捕捉更為複雜的非線性關係，但因本專案中的數據特徵具有較強的線性關聯，因此深度學習模型並未呈現顯著優勢。
 - 交叉驗證：使用 5 折交叉驗證來評估模型的穩健性，各模型在四類葡萄酒（Red, White, Rose, Sparkling）的交叉驗證 MSE 為：
@@ -77,7 +77,7 @@
     - 隨機森林：0.072 / 0.061 / 0.067 / 0.051
 
   結果顯示，隨機森林與 PCA 均具穩健的預測效果，並且在交叉驗證中表現出穩定性，適合應用於葡萄酒品質的預測。
-![image](Picture/CrossValidationMSE.png)
+![image](../Picture/CrossValidationMSE.png)
 
 ## 特徵重要性分析
 針對季節性天氣特徵的影響進行分析，我們綜合了三種回歸方法來識別影響葡萄酒評分的重要特徵：
@@ -91,16 +91,16 @@
 1. **日照時間 (Sunshine Duration) vs. 評分**
     - 春季和夏季的日照時間顯示出，較長的日照時間（超過30,000秒）與高評分（4.4至4.8）呈現正相關。
     - 在秋季，不同日照時間對評分的影響相對均衡，未見明顯的趨勢，儘管紅酒在較長的日照下評分略高。
-![image](Picture/SpringSunshine.png)![image](Picture/SummerSunshine.png)![image](Picture/FallSunshine.png)
+![image](../Picture/SpringSunshine.png)![image](../Picture/SummerSunshine.png)![image](../Picture/FallSunshine.png)
 
 2. **平均氣溫 (Mean Temperature) vs. 評分**
     - 在春季和夏季，氣溫和評分的相關性較難發現明顯趨勢，氣溫範圍在5°C到25°C之間。
     - 秋季的氣溫對各類酒評分的影響似乎較均勻，且大多數評分集中在4.2至4.6之間。
-![image](Picture/SpringTemp.png)![image](Picture/SummerTemp.png)![image](Picture/FallTemp.png)
+![image](../Picture/SpringTemp.png)![image](../Picture/SummerTemp.png)![image](../Picture/FallTemp.png)
 3. **降水量 (Precipitation) vs. 評分**
     - 春季和夏季降水量較低時（約0至5mm），大部分類型的葡萄酒（特別是紅酒）評分略高，但超過一定降水量（>5mm）後，評分趨勢變得較為平坦。
     - 秋季降水量的變化對評分的影響也並不明顯，但當降水量低於5mm時，整體評分似乎稍高，尤其對紅酒的影響更為明顯。
-![image](Picture/SpringPrec.png)![image](Picture/SummerPrec.png)![image](Picture/FallPrec.png)
+![image](../Picture/SpringPrec.png)![image](../Picture/SummerPrec.png)![image](../Picture/FallPrec.png)
 
 ## 時間規劃與挑戰 (Timeline and Challenges)
 - 時間表設置：
